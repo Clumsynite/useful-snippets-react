@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
+import "../styles/ErrorPage.css";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -7,17 +8,7 @@ const ErrorPage = () => {
   console.error(error);
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        width: "100vw",
-        overflow: "none",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div id="error-page">
       <div
         title={error?.error?.message}
         style={{
