@@ -1,0 +1,20 @@
+.sidenav-container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  padding: 12px 24px;
+}
+
+.sidenav-heading {
+  padding: 12px 8px;
+  border: 1px solid #ffffff40;
+}
+
+.sidenav-menu-items {
+  margin: 12px 0;
+  overflow: auto;
+  height: calc(100vh - 100px);
+}

@@ -1,39 +1,20 @@
-import React, { useEffect } from "react";
-import { Layout } from "antd";
+import React from "react";
 import { Outlet } from "react-router-dom";
 
-import SideBar from "./components/SideBar";
-
-import "antd/dist/reset.css";
 import "./styles/App.css";
 
-import Footer from "./components/Footer";
+import SideNav from "./components/SideNav";
+import Container from "./components/Container";
 
-const { Content } = Layout;
-const App = () => {
-  useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log("APP INTIALISED");
-  }, []);
-
-  return (
-    <div id="App">
-      <Layout hasSider>
-        <SideBar />
-        <Content
-          style={{
-            padding: 24,
-            textAlign: "center",
-            height: "calc(100vh - 50px)",
-            overflow: "auto",
-          }}
-        >
-          <Outlet />
-        </Content>
-        <Footer />
-      </Layout>
+const App = () => (
+  <div id="App">
+    <div id="layout">
+      <SideNav />
+      <Container>
+        <Outlet />
+      </Container>
     </div>
-  );
-};
+  </div>
+);
 
 export default App;

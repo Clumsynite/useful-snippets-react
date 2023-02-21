@@ -12,6 +12,6 @@ const modules = [
   },
 ];
 
-export const menuItems = modules.map((module) => ({ ...module, element: "" }));
+export const menuItems = modules.map((module) => ({ ...module, element: null }));
 
 export default modules;
