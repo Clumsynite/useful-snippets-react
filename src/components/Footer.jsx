@@ -1,25 +1,20 @@
 import React from "react";
 
-import { Layout } from "antd";
-
-const { Footer: AntdFooter } = Layout;
-
 const Footer = () => (
-  <AntdFooter
+  <div
     style={{
       textAlign: "center",
-      position: "fixed",
+      position: "relative",
       bottom: 0,
       left: 0,
       width: "100vw",
       height: 48,
-      paddingBottom: 40,
-      zIndex: -1,
+      // zIndex: -1,
       overflow: "hidden",
     }}
   >
     Useful Snippets React ©2023 Created by Rishabh Pathak
-  </AntdFooter>
+  </div>
 );
 
 export default Footer;
