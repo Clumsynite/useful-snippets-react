@@ -1,22 +1,40 @@
 .menu-item {
-  color: #fff;
-  background-color: grey;
   margin: 12px 0px;
   padding: 6px 12px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   user-select: none;
+
   font-weight: 300;
+  /* 
+  color: #fff;
+  background-color: grey;
+  border: 1px solid #000; */
+
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
 }
 
 .menu-item-active {
+  /* color: #000;
+  background-color: whitesmoke; */
+
+  /* color: #fff;
+  background-color: #000;
+  border: 1px solid #fff; */
+  font-weight: 500;
   color: #000;
   background-color: whitesmoke;
-  font-weight: 500;
+  border: 1px solid gray;
 }
 
 .menu-item:hover {
   /* background-color: lightgrey;
   color: #000; */
-  opacity: 0.8;
+
+  opacity: 0.9;
+  color: #000;
+  background-color: lightgray;
+  border: 1px solid #fff;
 }
