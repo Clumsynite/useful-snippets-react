@@ -14,10 +14,11 @@ const SideNav = (props, ref) => {
 
   const selectedMenu = [path.join(""), path[path.length - 1], `${path[1]}main`];
 
-  const routesToGoTo = menuItems.map((item) => item.name);
+  const routesToGoTo = menuItems.map((item) => item.path);
+
   const onMenuClick = (item) => {
-    if (routesToGoTo.includes(item.key)) {
-      nvigate(`/${item.key}`);
+    if (routesToGoTo.includes(item.path)) {
+      nvigate(`/${item.path}`);
     }
   };
   return (
