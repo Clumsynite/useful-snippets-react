@@ -7,7 +7,6 @@ html {
   padding: 0px;
 }
 
-
 #layout {
   display: flex;
   flex-direction: row;
@@ -36,4 +35,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #888888;
 }
-

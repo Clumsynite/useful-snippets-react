@@ -6,15 +6,27 @@
   overflow: hidden;
   color: #fff;
   padding: 12px 24px;
+  transition: 0.3s ease-in-out;
 }
 
 .sidenav-heading {
   padding: 12px 8px;
   border: 1px solid #ffffff40;
+  flex: 8;
+  text-align: left;
 }
 
 .sidenav-menu-items {
   margin: 12px 0;
   overflow: auto;
   height: calc(100vh - 100px);
+}
+
+.collapse-icon {
+  font-size: 32px;
+  user-select: none;
+  cursor: pointer;
+  flex: 2;
+  text-align: right;
+  padding-left: 12px;
 }

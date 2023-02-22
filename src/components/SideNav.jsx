@@ -1,11 +1,12 @@
 import React, { forwardRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { getIntials } from "../helper/string";
 import "../styles/SideNav.css";
 import { menuItems } from "../utility/modules";
 import MenuItem from "./MenuItem";
 
 const SideNav = (props, ref) => {
-  const [isCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const location = useLocation();
   const nvigate = useNavigate();
@@ -21,6 +22,11 @@ const SideNav = (props, ref) => {
       nvigate(`/${item.path}`);
     }
   };
+
+  const toggleCollapse = () => setIsCollapsed(!isCollapsed);
+
+  const headingLabel = "Useful Snippets";
+
   return (
     <div
       id="sidenav"
@@ -28,7 +34,19 @@ const SideNav = (props, ref) => {
       style={{ backgroundColor: "#000000", width: isCollapsed ? 80 : 200 }}
       ref={ref}
     >
-      <div className="sidenav-heading">Useful snippets</div>
+      <div className="flex-row">
+        <div className="sidenav-heading">{isCollapsed ? getIntials(headingLabel) : headingLabel}</div>
+        <div
+          className="collapse-icon"
+          title={isCollapsed ? "Expand" : "Collapse"}
+          role="button"
+          onClick={toggleCollapse}
+          onKeyDown={() => {}}
+          tabIndex="0"
+        >
+          {isCollapsed ? ">" : "<"}
+        </div>
+      </div>
       <div className="sidenav-menu-items">
         {!!menuItems?.length &&
           menuItems.map((item) => (
@@ -37,6 +55,7 @@ const SideNav = (props, ref) => {
               label={item.label}
               isSelected={selectedMenu.includes(item.key)}
               onClick={() => onMenuClick(item)}
+              isCollapsed={isCollapsed}
             />
           ))}
       </div>
