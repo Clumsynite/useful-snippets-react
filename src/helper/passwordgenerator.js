@@ -19,7 +19,8 @@ export function generatePasswordWithOptions(
     boolean: "@#$&",
     string: special,
   };
-  const specials = Object.keys(types).includes(typeof special) ? types[typeof special] : "";
+
+  const specials = special && Object.keys(types).includes(typeof special) ? types[typeof special] : "";
   let password = "";
 
   const applied = {
