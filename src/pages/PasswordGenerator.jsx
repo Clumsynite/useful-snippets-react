@@ -73,46 +73,48 @@ const PasswordGenerator = () => {
   return (
     <div>
       <div className="title">Password genetator</div>
-      <div className="generator-card">
-        <div className="password-section">
-          <div className="password-field">{password}</div>
-          <div className="password-generator">
-            <button onClick={onPasswordgenerate} type="button">
-              Generate
-            </button>
+      <div className="password-container">
+        <div className="generator-card">
+          <div className="password-section">
+            <div className="password-field">{password}</div>
+            <div className="password-generator">
+              <button onClick={onPasswordgenerate} type="button">
+                Generate
+              </button>
+            </div>
+          </div>
+          <ErrorMessage error={error} setError={setError} />
+          <div className="options-section flex-row">
+            <div className="flex-row password-length-section">
+              <div>Length</div>
+              <input
+                type="number"
+                className="password-length-input"
+                value={length}
+                onChange={onLengthChange}
+                min={lengthOptions.min}
+                max={lengthOptions.max}
+              />
+            </div>
+            <div className="password-options-section">
+              <Checkbox label="Lowercase" name="lower" checked={options.lower} onChange={onOptionChange} id="lower" />
+              <Checkbox label="Uppercase" name="upper" checked={options.upper} onChange={onOptionChange} id="upper" />
+              <Checkbox
+                label="Special Characters"
+                name="special"
+                checked={options.special}
+                onChange={onOptionChange}
+                id="special"
+              />
+              <Checkbox label="Numbers" name="num" checked={options.num} onChange={onOptionChange} id="num" />
+            </div>
           </div>
         </div>
-        <ErrorMessage error={error} setError={setError} />
-        <div className="options-section flex-row">
-          <div className="flex-row password-length-section">
-            <div>Length</div>
-            <input
-              type="number"
-              className="password-length-input"
-              value={length}
-              onChange={onLengthChange}
-              min={lengthOptions.min}
-              max={lengthOptions.max}
-            />
-          </div>
-          <div className="password-options-section">
-            <Checkbox label="Lowercase" name="lower" checked={options.lower} onChange={onOptionChange} id="lower" />
-            <Checkbox label="Uppercase" name="upper" checked={options.upper} onChange={onOptionChange} id="upper" />
-            <Checkbox
-              label="Special Characters"
-              name="special"
-              checked={options.special}
-              onChange={onOptionChange}
-              id="special"
-            />
-            <Checkbox label="Numbers" name="num" checked={options.num} onChange={onOptionChange} id="num" />
-          </div>
+        <div className="copy-password-container">
+          <button type="button" onClick={copyPassword} className="copy-password-button">
+            Copy Password
+          </button>
         </div>
-      </div>
-      <div className="copy-password-container">
-        <button type="button" onClick={copyPassword} className="copy-password-button">
-          Copy Password
-        </button>
       </div>
       <Toast text={toast} setText={setTToast} duration={3000} />
     </div>
