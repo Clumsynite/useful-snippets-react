@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Checkbox from "../components/Checkbox";
 import ErrorMessage from "../components/ErrorMessage";
+import Toast from "../components/Toast";
 import { generatePasswordWithOptions } from "../helper/passwordgenerator";
 import useMount from "../hooks/useMount";
 
@@ -10,6 +11,8 @@ const PasswordGenerator = () => {
   const [password, setPassword] = useState("");
   const [length, setLength] = useState(8);
   const [error, setError] = useState("");
+
+  const [toast, setTToast] = useState("");
 
   const defaultOptions = {
     lower: true,
@@ -62,6 +65,11 @@ const PasswordGenerator = () => {
     }
   };
 
+  const copyPassword = () => {
+    navigator.clipboard.writeText(password);
+    setTToast("Password copied to clipboard!");
+  };
+
   return (
     <div>
       <div className="title">Password genetator</div>
@@ -101,6 +109,12 @@ const PasswordGenerator = () => {
           </div>
         </div>
       </div>
+      <div className="copy-password-container">
+        <button type="button" onClick={copyPassword} className="copy-password-button">
+          Copy Password
+        </button>
+      </div>
+      <Toast text={toast} setText={setTToast} duration={3000} />
     </div>
   );
 };
