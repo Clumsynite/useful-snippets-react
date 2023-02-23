@@ -2,6 +2,7 @@ import React from "react";
 
 import Home from "../pages/Home";
 import PasswordGenerator from "../pages/PasswordGenerator";
+import Calendar from "../pages/Calendar";
 
 const modules = [
   {
@@ -14,9 +15,16 @@ const modules = [
   {
     label: "Password Generator",
     path: "password-generator",
-    name: "passsword-generator",
+    name: "passsord-generator",
     key: "password-generator",
     element: <PasswordGenerator />,
+  },
+  {
+    label: "Calendar",
+    path: "calendar",
+    name: "calendar",
+    key: "calendar",
+    element: <Calendar />,
   },
 ];
 

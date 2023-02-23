@@ -1,0 +1,13 @@
+.month-button {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 12px;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  user-select: none;
+}
+
+.month-button:hover {
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
