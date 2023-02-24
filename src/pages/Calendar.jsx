@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import moment from "moment";
 import "../styles/Calendar.css";
-import { number, oneOf, string } from "prop-types";
+import { number, object, oneOfType, string } from "prop-types";
 
 const monthFormat = "MMMM yyyy";
 const dateFormat = "DD MMMM yyyy";
@@ -21,7 +21,13 @@ const flexCol = {
 const Calendar = () => {
   const calendarOptions = { row: 6, columns: 7 };
   const today = moment().toISOString();
-  const [currentMonth, setCurrentMonth] = useState(moment(today).format(monthFormat));
+  const [currentMonth, _setCurrentMonth] = useState(moment(today).format(monthFormat));
+  const currentMonthRef = useRef(currentMonth);
+  const setCurrentMonth = (data) => {
+    currentMonthRef.current = data;
+    _setCurrentMonth(data);
+  };
+
   const [dates, setDates] = useState([]);
 
   const [cellWidth, setCellWidth] = useState(null);
@@ -53,6 +59,23 @@ const Calendar = () => {
   useEffect(() => {
     generateDatesArray();
   }, [currentMonth]);
+
+  const changeMonth = (e) => {
+    const currMonth = currentMonthRef.current;
+    const isLeft = e.keyCode === 37;
+    const isRight = e.keyCode === 39;
+    if (isRight) setCurrentMonth(moment(currMonth, monthFormat).add(1, "month").format(monthFormat));
+    if (isLeft) setCurrentMonth(moment(currMonth, monthFormat).subtract(1, "month").format(monthFormat));
+  };
+
+  const event = "keyup";
+
+  useEffect(() => {
+    document.addEventListener(event, changeMonth);
+    return () => {
+      document.removeEventListener(event, changeMonth);
+    };
+  }, []);
 
   return (
     <div>
@@ -176,8 +199,8 @@ const DateCell = ({ date, height = "auto", currentMonth }) => {
   );
 };
 DateCell.propTypes = {
-  date: string.isRequired,
-  height: oneOf([string, number]).isRequired,
+  date: oneOfType([string, object]).isRequired,
+  height: oneOfType([string, number]).isRequired,
   currentMonth: string.isRequired,
 };
 export default Calendar;
