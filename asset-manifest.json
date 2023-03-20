@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/useful-snippets-react/static/css/main.dbb772fd.css",
-    "main.js": "/useful-snippets-react/static/js/main.79bd5b16.js",
+    "main.css": "/useful-snippets-react/static/css/main.2b821581.css",
+    "main.js": "/useful-snippets-react/static/js/main.773d082e.js",
     "index.html": "/useful-snippets-react/index.html",
-    "main.dbb772fd.css.map": "/useful-snippets-react/static/css/main.dbb772fd.css.map",
-    "main.79bd5b16.js.map": "/useful-snippets-react/static/js/main.79bd5b16.js.map"
+    "static/media/eye-off.svg": "/useful-snippets-react/static/media/eye-off.9b252ac3c64df27e39dcfd7066115c87.svg",
+    "static/media/copy.svg": "/useful-snippets-react/static/media/copy.4c19a6dd8558a8e82f16d174837df176.svg",
+    "static/media/eye.svg": "/useful-snippets-react/static/media/eye.b1238fb7eda76106bcfacd66eeefcaa7.svg",
+    "main.2b821581.css.map": "/useful-snippets-react/static/css/main.2b821581.css.map",
+    "main.773d082e.js.map": "/useful-snippets-react/static/js/main.773d082e.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbb772fd.css",
-    "static/js/main.79bd5b16.js"
+    "static/css/main.2b821581.css",
+    "static/js/main.773d082e.js"
   ]
 }
