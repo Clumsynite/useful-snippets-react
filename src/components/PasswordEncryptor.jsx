@@ -25,7 +25,8 @@ const PasswordEncryptor = () => {
 
   const toggleVisibility = () => setPasswordVisible(!passwordVisible);
 
-  const onPasswordHash = async () => {
+  const onPasswordHash = async (e) => {
+    e.preventDefault();
     try {
       const salt = await bcrypt.genSalt(10);
       const encPassword = await bcrypt.hash(rawPassword, salt);
@@ -45,7 +46,7 @@ const PasswordEncryptor = () => {
       <div className="title">Bcrypt Hash generator</div>
       <div className="hash-container">
         <div className="hash-generator-card">
-          <div className="password-section">
+          <form className="password-section">
             <div className="flex-row password-length-section">
               <div>Password</div>
               <input
@@ -53,6 +54,7 @@ const PasswordEncryptor = () => {
                 className="raw-password-input"
                 value={rawPassword}
                 onChange={onRawPasswordChange}
+                autoComplete="password"
               />
               <div
                 title={passwordVisible ? "Hide Password" : "Show Password"}
@@ -67,11 +69,11 @@ const PasswordEncryptor = () => {
               </div>
             </div>
             <div className="hash-generator">
-              <button onClick={onPasswordHash} type="button" disabled={!rawPassword}>
+              <button onClick={onPasswordHash} type="submit" disabled={!rawPassword}>
                 Hash
               </button>
             </div>
-          </div>
+          </form>
           {password && (
             <>
               <div className="hash-section">
