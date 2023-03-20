@@ -42,7 +42,7 @@ const PasswordEncryptor = () => {
 
   return (
     <div>
-      <div className="title">Bcrypt Hash genetator</div>
+      <div className="title">Bcrypt Hash generator</div>
       <div className="hash-container">
         <div className="hash-generator-card">
           <div className="password-section">
@@ -67,7 +67,7 @@ const PasswordEncryptor = () => {
               </div>
             </div>
             <div className="hash-generator">
-              <button onClick={onPasswordHash} type="button">
+              <button onClick={onPasswordHash} type="button" disabled={!rawPassword}>
                 Hash
               </button>
             </div>

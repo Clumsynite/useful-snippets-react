@@ -1,12 +1,12 @@
 import React from "react";
 import PasswordEncryptor from "../components/PasswordEncryptor";
+import PasswordVerifier from "../components/PasswordVerifier";
 
 const BcryptEncryptor = () => (
-  <div>
-    <div>
-      <PasswordEncryptor />
-    </div>
+  <div style={{ marginBottom: 120 }}>
+    <PasswordEncryptor />
     <hr />
+    <PasswordVerifier />
   </div>
 );
 
