@@ -3,6 +3,7 @@ import React from "react";
 import Home from "../pages/Home";
 import PasswordGenerator from "../pages/PasswordGenerator";
 import Calendar from "../pages/Calendar";
+import BcryptEncryptor from "../pages/BcryptEncryptor";
 
 const modules = [
   {
@@ -18,6 +19,13 @@ const modules = [
     name: "passsord-generator",
     key: "password-generator",
     element: <PasswordGenerator />,
+  },
+  {
+    label: "Bcrypt Encryptor",
+    path: "bcrypt",
+    name: "bcrypt",
+    key: "bcrypt",
+    element: <BcryptEncryptor />,
   },
   {
     label: "Calendar",
