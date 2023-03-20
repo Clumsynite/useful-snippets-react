@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/useful-snippets-react/static/css/main.dbb772fd.css",
+    "main.js": "/useful-snippets-react/static/js/main.5c37460d.js",
+    "index.html": "/useful-snippets-react/index.html",
+    "main.dbb772fd.css.map": "/useful-snippets-react/static/css/main.dbb772fd.css.map",
+    "main.5c37460d.js.map": "/useful-snippets-react/static/js/main.5c37460d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbb772fd.css",
+    "static/js/main.5c37460d.js"
+  ]
+}
