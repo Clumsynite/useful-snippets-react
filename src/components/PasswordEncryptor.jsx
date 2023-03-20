@@ -82,8 +82,10 @@ const PasswordEncryptor = () => {
               </div>
               <div className="copy-hash-container">
                 <button type="button" onClick={copyHash} className="copy-hash-button">
-                  <CopyIcon />
-                  Copy Hash
+                  <div>Copy Hash</div>
+                  <div>
+                    <CopyIcon />
+                  </div>
                 </button>
               </div>
             </>
