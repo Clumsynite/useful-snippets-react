@@ -21,17 +21,17 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #55555550;
   border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #555555;
+  background: #888888;
   border-radius: 2px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #888888;
+  background: #121212;
 }
