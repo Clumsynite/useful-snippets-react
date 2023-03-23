@@ -6,6 +6,7 @@ import { menuItems } from "../utility/modules";
 import MenuItem from "./MenuItem";
 
 const SideNav = (props, ref) => {
+  const showCollapseIcon = false;
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const location = useLocation();
@@ -36,16 +37,18 @@ const SideNav = (props, ref) => {
     >
       <div className="flex-row">
         <div className="sidenav-heading">{isCollapsed ? getIntials(headingLabel) : headingLabel}</div>
-        <div
-          className="collapse-icon"
-          title={isCollapsed ? "Expand" : "Collapse"}
-          role="button"
-          onClick={toggleCollapse}
-          onKeyDown={() => {}}
-          tabIndex="0"
-        >
-          {isCollapsed ? ">" : "<"}
-        </div>
+        {showCollapseIcon && (
+          <div
+            className="collapse-icon"
+            title={isCollapsed ? "Expand" : "Collapse"}
+            role="button"
+            onClick={toggleCollapse}
+            onKeyDown={() => {}}
+            tabIndex="0"
+          >
+            {isCollapsed ? ">" : "<"}
+          </div>
+        )}
       </div>
       <div className="sidenav-menu-items">
         {!!menuItems?.length &&

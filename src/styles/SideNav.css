@@ -1,3 +1,7 @@
+#sidenav {
+  flex: 1;
+}
+
 .sidenav-container {
   position: relative;
   top: 0px;
