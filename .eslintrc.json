@@ -18,6 +18,7 @@
     "import/no-extraneous-dependencies": "off",
     "arrow-body-style": "warn",
     "object-curly-newline": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "max-len": ["error", { "code": 150 }]
   }
 }

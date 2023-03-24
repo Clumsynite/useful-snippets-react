@@ -1,0 +1,33 @@
+.h-scroll-container {
+  padding: 12px;
+  border: 1px solid #000ff020;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin: 6px 0px;
+  border-radius: 8px;
+}
+.h-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.h-scroll-item {
+  padding: 12px 24px;
+  margin: 0px 6px;
+  background-color: white;
+  background-blend-mode: multiply;
+  border-radius: 8px;
+  /* flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0; */
+  flex: 1 0 20%;
+
+}
+
+.h-scroll-item div {
+  padding: 4px 12px;
+}

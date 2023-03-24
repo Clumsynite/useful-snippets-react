@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import PasswordGenerator from "../pages/PasswordGenerator";
 import Calendar from "../pages/Calendar";
 import BcryptEncryptor from "../pages/BcryptEncryptor";
+import CardScroll from "../pages/CardScroll";
 
 const modules = [
   {
@@ -26,6 +27,13 @@ const modules = [
     name: "bcrypt",
     key: "bcrypt",
     element: <BcryptEncryptor />,
+  },
+  {
+    label: "Card Scroll",
+    path: "cardScroll",
+    name: "cardScroll",
+    key: "cardScroll",
+    element: <CardScroll />,
   },
   {
     label: "Calendar",
