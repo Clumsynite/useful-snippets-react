@@ -12,6 +12,7 @@ const itemShape = shape({
 });
 
 const HorizontalScroll = ({ containerStyle, containerClass, width, items }) => {
+  // eslint-disable-next-line no-unused-vars
   const [scrollLeft, setScrollLeft] = useState(0);
   const containerRef = useRef(null);
 
@@ -20,7 +21,7 @@ const HorizontalScroll = ({ containerStyle, containerClass, width, items }) => {
   itemRefs.current = items.map((_, i) => itemRefs.current[i] ?? createRef());
 
   const handleScroll = (event) => {
-    console.log("scrolling............", event.target.scrollLeft, scrollLeft);
+    // console.log("scrolling............", event.target.scrollLeft, scrollLeft);
     setScrollLeft(event.target.scrollLeft);
   };
 
@@ -53,8 +54,8 @@ const HorizontalScroll = ({ containerStyle, containerClass, width, items }) => {
       dir = "";
     }
 
-    const name = cardRef?.current?.getAttribute("name");
-    console.log({ name, visible, dir });
+    // const name = cardRef?.current?.getAttribute("name");
+    // console.log({ name, visible, dir });
     // console.log({ isVisibleLocally, left, containerLeft, right, containerRight, name });
     // console.log({name, })
 
@@ -95,25 +96,51 @@ const HorizontalScroll = ({ containerStyle, containerClass, width, items }) => {
             const { visible, dir } = isInViewport(ref);
 
             const visibilityStyle = {
-              2: { backgroundColor: "#000", borderRadius: 0, margin: "12px 0px", padding: "0px 4px" },
-              1: { backgroundColor: "grey", borderRadius: 0, margin: "12px 0px", padding: "0px 4px" },
-              0: { backgroundColor: "#fff", borderRadius: "50%", padding: 0 },
+              2: {
+                backgroundColor: "#000",
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0,
+                margin: "12px 0px",
+                padding: "0px 4px",
+              },
+              1: {
+                backgroundColor: "grey",
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0,
+                margin: "12px 0px",
+                padding: "0px 4px",
+              },
+              0: {
+                backgroundColor: "#fff",
+                borderTopLeftRadius: "50%",
+                borderBottomLeftRadius: "50%",
+                borderTopRightRadius: "50%",
+                borderBottomRightRadius: "50%",
+                padding: 0,
+              },
             };
 
             const dirStyle = {
               mid: {
-                borderRadius: 0,
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0,
               },
               left: {
                 borderTopLeftRadius: "50%",
                 borderBottomLeftRadius: "50%",
-                borderColor: "grey",
+                border: "1px solid grey",
                 padding: 0,
               },
               right: {
                 borderTopRightRadius: "50%",
                 borderBottomRightRadius: "50%",
-                borderColor: "grey",
+                border: "1px solid grey",
                 padding: 0,
               },
             };
@@ -124,7 +151,10 @@ const HorizontalScroll = ({ containerStyle, containerClass, width, items }) => {
                   height: 12,
                   margin: `12px 4px`,
                   border: "1px solid #000",
-                  borderRadius: "50%",
+                  borderTopLeftRadius: "50%",
+                  borderBottomLeftRadius: "50%",
+                  borderTopRightRadius: "50%",
+                  borderBottomRightRadius: "50%",
                   ...([0, 1, 2].includes(visible) && visibilityStyle[visible]),
                   ...(dir && dirStyle[dir]),
                 }}
