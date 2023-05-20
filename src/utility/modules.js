@@ -30,9 +30,9 @@ const modules = [
   },
   {
     label: "Card Scroll",
-    path: "cardScroll",
-    name: "cardScroll",
-    key: "cardScroll",
+    path: "card-scroll",
+    name: "card-scroll",
+    key: "card-scroll",
     element: <CardScroll />,
   },
   {
