@@ -5,6 +5,7 @@ import PasswordGenerator from "../pages/PasswordGenerator";
 import Calendar from "../pages/Calendar";
 import BcryptEncryptor from "../pages/BcryptEncryptor";
 import CardScroll from "../pages/CardScroll";
+import Reveal from "../pages/Reveal";
 
 const modules = [
   {
@@ -41,6 +42,13 @@ const modules = [
     name: "calendar",
     key: "calendar",
     element: <Calendar />,
+  },
+  {
+    label: "Reveal",
+    path: "reveal",
+    name: "reveal",
+    key: "reveal",
+    element: <Reveal />,
   },
 ];
 
