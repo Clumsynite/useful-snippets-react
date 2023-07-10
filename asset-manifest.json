@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/useful-snippets-react/static/css/main.eebf4d89.css",
-    "main.js": "/useful-snippets-react/static/js/main.e5ac7752.js",
+    "main.css": "/useful-snippets-react/static/css/main.5444195f.css",
+    "main.js": "/useful-snippets-react/static/js/main.1e4b2737.js",
     "static/media/README.md": "/useful-snippets-react/static/media/README.ff6cc55cdba50f51e2ac.md",
     "index.html": "/useful-snippets-react/index.html",
     "static/media/eye-off.svg": "/useful-snippets-react/static/media/eye-off.9b252ac3c64df27e39dcfd7066115c87.svg",
     "static/media/copy.svg": "/useful-snippets-react/static/media/copy.4c19a6dd8558a8e82f16d174837df176.svg",
     "static/media/eye.svg": "/useful-snippets-react/static/media/eye.b1238fb7eda76106bcfacd66eeefcaa7.svg",
-    "main.eebf4d89.css.map": "/useful-snippets-react/static/css/main.eebf4d89.css.map",
-    "main.e5ac7752.js.map": "/useful-snippets-react/static/js/main.e5ac7752.js.map"
+    "main.5444195f.css.map": "/useful-snippets-react/static/css/main.5444195f.css.map",
+    "main.1e4b2737.js.map": "/useful-snippets-react/static/js/main.1e4b2737.js.map"
   },
   "entrypoints": [
-    "static/css/main.eebf4d89.css",
-    "static/js/main.e5ac7752.js"
+    "static/css/main.5444195f.css",
+    "static/js/main.1e4b2737.js"
   ]
 }
